@@ -1,0 +1,18 @@
+
+{
+  "name": "morphlex-monorepo",
+  "private": true,
+  "scripts": {
+    "brain": "pnpm --filter brain dev",
+    "hands:watch": "nodemon --watch 'packages/hands/src' --ext 'ts' --exec 'pnpm --filter hands compile'",
+    "hands:build": "pnpm --filter hands build",
+    "install-all": "pnpm install",
+    "predev": "pnpm --filter hands compile",
+    "dev": "concurrently \"pnpm hands:watch\" \"pnpm brain\""
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}

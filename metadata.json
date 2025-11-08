@@ -1,0 +1,5 @@
+{
+  "name": "Morphlex: AI Metaprogrammer",
+  "description": "An autonomous AI agent that executes safe, deterministic, and complete codebase migrations by fusing the high-level orchestration of AI Studio, the deep semantic understanding of Gemini, and the deterministic power of metaprogramming (codemods).",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,42 @@
+{
+  "name": "hands",
+  "displayName": "Morphlex Hands",
+  "description": "The local agent server for Morphlex.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "files": [
+    "dist"
+  ],
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "build": "pnpm compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@google/genai": "^0.12.0",
+    "dotenv": "^16.4.5",
+    "types": "workspace:*",
+    "ws": "^8.17.0"
+  }
+}
